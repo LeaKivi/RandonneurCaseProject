@@ -1,0 +1,331 @@
+﻿/* *************************************************************************
+ * ModelCaseStyleSheet.css
+ *
+ * Original version: Kari Silpiö 20.3.2014 v1.0
+ *      Modified by: - 
+ * -------------------------------------------------------------------------
+ * Application: DWA Model Case
+ * -------------------------------------------------------------------------
+ *  <div> tags are used for defining the general page layout. 
+ *
+ *  In this CSS file the main divs are organised as follows:
+ *  CONTAINER: The whole page (includes everything else)
+ *  HEADER:    Page header, Login info
+ *  LEFT:      Navigation Menu
+ *  CENTER:    Main ListBox and the main image
+ *  RIGHT:     Details (TextBoxes etc.), Buttons, Messages
+ *  FOOTER:    Validator Icons, Author
+ * -------------------------------------------------------------------------
+ *  NB! See the file ModelCaseStyleSheet.PDF for a graphical representation 
+ *      of the above.
+ * -------------------------------------------------------------------------
+ * NOTE: This file can be included in your solution.
+ *   If you modify this file, write your name & date after "Modified by:"
+ *   DO NOT REMOVE THIS COMMENT.
+ ************************************************************************* */
+body
+{
+    font-family: 'Times New Roman';
+    font-size:16px;
+    margin:0;
+    padding:0;
+}
+
+#div_CONTAINER
+{
+    width:934px; 
+    float:left;   
+    margin-top:20px;
+    margin-left:20px;
+    padding-left: 0px;
+    padding-top: 0px;
+    border: 1px solid #bbb;
+}
+
+/* --- HEADER, LEFT, CENTER, RIGHT, FOOTER --- */
+#div_HEADER
+{
+    width:920px;
+    float:left; 
+    margin-top:-1px;         /* To adjust border alignment */
+    margin-left:-1px;        /* To adjust border alignment */    
+    padding:7px;
+    background-color: #eee;
+    border: 1px solid #bbb; 
+
+}
+
+#div_LEFT
+{
+    width:140px;
+    float: left;
+    padding:7px; 
+    padding-top:20px; 
+    padding-right:0px;
+}
+
+#div_CENTER
+{
+    width: 290px;
+    float: left;
+    margin: 0;
+    padding: 20px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    /* Vertical lines */
+    border-left: 2px solid #eee;
+    border-right: 2px solid #eee;
+}
+
+#div_RIGHT
+{
+    width:450px;
+    float:left;
+    margin:0;
+    padding-top:20px; 
+    padding-left:10px; 
+    background-color: #fff;
+    height: 337px;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+#div_FOOTER
+{
+    width:920px;
+    float:left;
+    margin:0;
+    padding:7px;
+    padding-top:5px;
+    padding-bottom:0px;
+    background-color: #eee;
+}
+
+
+
+/* === (1) IN HEADER: Page Header, Login Info, Logout link === */
+#div_HEADER #div_header_TEXT
+{
+    float: left;
+    padding-left: 5px;
+    width: 313px;
+}
+#div_HEADER #div_header_TEXT h1                         /* Page header */
+{
+  font-size: 32px;
+  color:#444;
+  margin:0;
+  padding:0;
+}
+#div_HEADER #div_header_LOGIN_STATUS                    /* Login status formatting */
+{
+    float:right;
+    font-size:12px;
+    padding:3px;
+    height: 36px;
+}
+#div_HEADER #div_header_LOGIN_STATUS a.logout_link      /* LOGOUT link formatting */
+{
+    color:blue;
+    text-decoration:none;
+}
+
+
+/* === (2.1) ON LEFT: Navigation menu === */
+#div_LEFT #div_NAV                              /* Navigation menu formatting */
+{
+    font-family: 'Times New Roman'; 
+    font-size: 15px; 
+    line-height: 1.3em;
+}
+#div_NAV a.current_page_link                    /* Color for the link to the current page */
+{   
+    color:black;  
+    text-decoration:none;
+}
+#div_NAV a.other_page_link                      /* Color for a link to another page */          
+{
+    color:blue;
+    text-decoration:none;
+}
+#div_NAV a.current_page_link:hover              /* Link decoration when the mouse is on the link */
+{
+    text-decoration:none;
+}
+#div_NAV a.other_page_link:hover                /* Link decoration when the mouse is on the link */
+{
+    text-decoration:underline;
+}
+#div_NAV a:visited
+{
+    color:blue;
+    text-decoration:none;
+}
+
+
+/* === (2.2) IN CENTER: Listbox, Image(s), (Search filters) === */
+#div_CENTER .div_center_HEADER
+{
+    margin-bottom:5px;
+}
+#div_CENTER #div_center_LISTBOX         /* Center ListBox */
+{
+    width:inherit;
+    float:left;
+    height: 235px;
+}
+#div_CENTER #div_center_LISTBOX .listbox_main
+{
+}
+#div_CENTER #div_center_IMAGE           /* Center Image */
+{
+    width:inherit;
+    float:left;
+    margin-top:10px;
+}
+#div_CENTER #main_image, #another_image
+{
+    width:278px;
+}
+#div_CENTER #div_search_filters         /* Optional search filters */
+{
+    margin-top:10px;
+    float:left;
+}
+#div_search_filters .seach_filters_dropdownlist
+{
+    width:278px; 
+    height:22px;
+}
+#div_search_filters .search_filters_button
+{
+    width:120px;
+    margin-right:2px;
+}
+
+
+/* === (2.3) ON RIGHT: Home page specific items === */
+#div_RIGHT .loginPanel                  /* LOGIN PANEL on the home page */
+{
+    width: 150px;
+    color: inherit;
+    background-color: inherit;
+    font-family: 'Times New Roman';
+    font-size: 12px;
+}
+#div_RIGHT .loginTextBox                /* Textboxes: Username, Password */
+{
+    width: 120px;
+}
+#div_RIGHT .loginButton                 /* Login Button */
+{
+    margin-top:2px;
+    width: 100px;
+}
+#div_RIGHT a.normal_link                /* Internet link on the home page*/
+{
+    color:blue;
+    text-decoration:none;
+}
+#div_RIGHT a.normal_link:hover
+{
+  text-decoration:underline;
+}
+
+
+/* === (2.3) ON RIGHT: Labels, Textboxes, Buttons, Messages === */
+#div_RIGHT #div_right_HEADER                              /* DIV for the details header */
+{
+    width:448px; 
+    float:left;
+    margin-bottom:20px;
+}
+
+#div_RIGHT #div_right_DETAILS                            /* DIV for DETAILS */
+{
+    width:450px;
+    float:left;
+}
+#div_right_DETAILS div.div_right_details_ROW            /* DIV for single layout row in details */
+{
+    width:448px; 
+    float:left;
+    margin-bottom:5px;
+}
+div.div_right_details_ROW .detail_label                 /* Label for a TextBox */
+{
+    width:110px;
+    float:left;
+    text-align:right;
+    padding-right:10px;
+}
+div.div_right_details_ROW .detail_textbox               /* Textboxes (normal) */
+{
+    float:left;
+    }
+div.div_right_details_ROW .detail_textbox_multiline     /* Textboxes (multi-line) */
+{
+    float:left;
+    height:150px;
+    width:250px;
+}
+div.div_right_details_ROW select.detail_dropdownlist    /* Dropdownlist */
+{
+}
+div.div_right_details_ROW .detail_listbox_wide          /* Listbox */
+{
+    width:420px; 
+    height:440px;
+}
+
+
+#div_RIGHT #div_right_BUTTONS                           /* DIV for BUTTONS */
+{
+    width:300px;
+    float:left;
+    margin-top:20px;
+    margin-left:120px;
+}
+#div_right_BUTTONS .div_right_buttons_button            /* Button */
+{
+    margin-right:2px;
+    margin-left: 7px;
+}
+
+
+#div_RIGHT #div_right_VALIDATORS                        /* DIV for VALIDATORS */
+{
+    width:inherit;
+    float:left;
+    margin-top:20px;
+}
+#div_RIGHT .validatorMessage                            /* Validator message */
+{
+    color:Red;
+}
+
+
+
+/* (3) IN FOOTER: W3C icons, Author */
+ #div_FOOTER #div_footer_W3C_ICONS                
+{
+    float:left;
+    padding:0;
+    margin:0;
+}
+#div_footer_W3C_ICONS .w3c_icon                         /* W3C icons */
+{
+    width:60px;
+    height:25px;
+    border:0;
+    margin-right:5px;
+}
+#div_FOOTER #div_footer_AUTHOR                          /* Author name */
+{
+    float:right;
+    padding-top:5px;
+    font-size:11px;
+}
+
+/* *** End *** */
